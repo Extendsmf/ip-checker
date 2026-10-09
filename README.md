@@ -1,3 +1,4 @@
+
 # 🔍 Threat Intelligence IP Checker
 
 Консольная утилита для автоматизированного анализа подозрительных IP-адресов и триажа инцидентов информационной безопасности. 
@@ -18,28 +19,28 @@
 ## 🛠 Быстрый старт через Docker (Рекомендуемый способ)
 
 1. Клонируйте репозиторий:
-   \`\`\`bash
-   git clone https://github.com/твой-юзернейм/ip-checker.git
-   cd ip-checker
-   \`\`\`
+```bash
+git clone https://github.com/Extendsmf/ip-checker.git
+cd ip-checker
+```
 
 2. Создайте файл `.env` на основе примера и вставьте ваши ключи:
-   \`\`\`bash
-   cp .env.example .env
-   # Отредактируйте .env, добавив свои ключи ABUSEIPDB_API_KEY и VIRUSTOTAL_API_KEY
-   \`\`\`
+```bash
+cp .env.example .env
+# Отредактируйте .env, добавив свои ключи ABUSEIPDB_API_KEY и VIRUSTOTAL_API_KEY
+```
 
 3. Соберите и запустите контейнер:
-   \`\`\`bash
-   docker build -t ip-checker .
-   docker run --rm --env-file .env ip-checker 8.8.8.8
-   \`\`\`
+```bash
+docker build -t ip-checker .
+docker run --rm --env-file .env ip-checker 8.8.8.8
+```
 
 ---
 
 ## 📋 Пример вывода
 
-\`\`\`text
+```text
 --- РЕЗУЛЬТАТ ПРОВЕРКИ AbuseIPDB ---
 IP: 8.8.8.8
 Организация: Google LLC
@@ -53,24 +54,24 @@ IP: 8.8.8.8
 сколько вендоров считают IP безопасным: 53
 Владелец: Google LLC
 Репутация: 562
-\`\`\`
+```
 
 ---
 
 ## 💻 Локальный запуск (без Docker)
 
 1. Создайте и активируйте виртуальное окружение:
-   \`\`\`bash
-   python3 -m venv venv
-   source venv/bin/activate
-   \`\`\`
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
 2. Установите зависимости:
-   \`\`\`bash
-   pip install -r requirements.txt
-   \`\`\`
+```bash
+pip install -r requirements.txt
+```
 
 3. Запустите анализ:
-   \`\`\`bash
-   python3 checker.py <целевой_ip>
-   \`\`\`
+```bash
+python3 checker.py <целевой_ip>
+```
